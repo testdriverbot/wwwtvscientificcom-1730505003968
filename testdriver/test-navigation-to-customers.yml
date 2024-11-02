@@ -1,0 +1,14 @@
+version: 4.0.79
+steps:
+  - prompt: Click on "Customers" in the navigation menu.
+    commands:
+      - command: hover-text
+        text: Customers
+        description: navigation menu item
+        action: click
+  - prompt: >-
+      Assert that customer testimonials or case studies are displayed.  # Use
+      the content of the file from the environment
+    commands:
+      - command: assert
+        expect: customer testimonials or case studies are displayed
