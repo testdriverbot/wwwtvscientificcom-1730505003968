@@ -1,0 +1,14 @@
+version: 4.0.79
+steps:
+  - prompt: Click on "About" in the navigation menu.
+    commands:
+      - command: hover-text
+        text: About
+        description: navigation menu item
+        action: click
+  - prompt: >-
+      Assert that company information or team member details are displayed.  #
+      Use the content of the file from the environment
+    commands:
+      - command: assert
+        expect: Introducing tvScientific
