@@ -1,0 +1,16 @@
+version: 4.0.79
+steps:
+  - prompt: Click on "Solutions" in the navigation menu.
+    commands:
+      - command: hover-text
+        text: Solutions
+        description: navigation menu item
+        action: click
+  - prompt: >-
+      Assert that solutions information or options are displayed.  # Use the
+      content of the file from the environment
+    commands:
+      - command: assert
+        expect: >-
+          Retail, Mobile Games, Fintech, Insurance, Travel and Hospitality
+          options are displayed
