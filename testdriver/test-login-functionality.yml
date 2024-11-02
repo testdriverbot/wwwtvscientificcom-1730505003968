@@ -1,0 +1,36 @@
+version: 4.0.79
+steps:
+  - prompt: Click on "Login".
+    commands:
+      - command: hover-text
+        text: Login
+        description: link in the header
+        action: click
+  - prompt: Assert that a login form displays.
+    commands:
+      - command: assert
+        expect: the login form with "Sign In" is visible
+  - prompt: Enter test credentials and attempt to log in.
+    commands:
+      - command: hover-text
+        text: Username
+        description: username input field
+        action: click
+      - command: type
+        text: testuser
+      - command: hover-text
+        text: Password
+        description: password input field
+        action: click
+      - command: type
+        text: testpassword
+      - command: hover-text
+        text: Sign in
+        description: sign in button
+        action: click
+  - prompt: >-
+      Assert that a dashboard or welcome message is displayed upon successful
+      login.  # Use the content of the file from the environment
+    commands:
+      - command: assert
+        expect: the dashboard or welcome message is visible
