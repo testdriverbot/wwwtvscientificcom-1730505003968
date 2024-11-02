@@ -1,0 +1,78 @@
+version: 4.0.79
+steps:
+  - prompt: Click on "Request a Demo".
+    commands:
+      - command: hover-text
+        text: Request a Demo
+        description: button in the header
+        action: click
+  - prompt: Assert that a form displays for demo requests.
+    commands:
+      - command: assert
+        expect: the form for demo requests is displayed
+  - prompt: Complete the form with test data.
+    commands:
+      - command: hover-text
+        text: First Name*
+        description: first name field
+        action: click
+      - command: type
+        text: Test
+      - command: hover-text
+        text: Last Name*
+        description: last name field
+        action: click
+      - command: type
+        text: User
+      - command: hover-text
+        text: Business email*
+        description: email field
+        action: click
+      - command: type
+        text: testuser@example.com
+      - command: hover-text
+        text: Company*
+        description: company field
+        action: click
+      - command: type
+        text: TestCorp
+      - command: hover-text
+        text: Website URL*
+        description: website field
+        action: click
+      - command: type
+        text: www.testcorp.com
+      - command: hover-text
+        text: Select your industry.*
+        description: industry dropdown
+        action: click
+      - command: type
+        text: Technology
+      - command: hover-text
+        text: What best describes your company?*
+        description: company description field
+        action: click
+      - command: type
+        text: Innovative Tech Solutions
+      - command: hover-text
+        text: What would you like to accomplish with CTV?
+        description: goals field
+        action: click
+      - command: type
+        text: Increase brand awareness
+  - prompt: Complete the form with test data.
+    commands:
+      - command: hover-text
+        text: Business email*
+        description: email field
+        action: click
+      - command: type
+        text: validemail@example.com
+  - prompt: Complete the form with test data.
+    commands:
+      - command: hover-text
+        text: Business email*
+        description: email field
+        action: click
+      - command: type
+        text: validemail@example.com
