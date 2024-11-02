@@ -1,0 +1,12 @@
+version: 4.0.79
+steps:
+  - prompt: Assert that the webpage loads successfully.
+    commands:
+      - command: assert
+        expect: TV Advertising That Performs is visible on the webpage
+  - prompt: >-
+      Assert that the logo is visible on the homepage.  # Use the content of the
+      file from the environment
+    commands:
+      - command: assert
+        expect: tvScientific logo is visible on the homepage
